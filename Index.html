@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+</style>
+<body>
+
+       <h1>PROGRAM TO DISPLAY THE LARGEST NUMBER USING PROMPT FOR INTEGER VALUES</h1>
+
+        <script>
+            let  num1 = parseInt(prompt("Please insert the First Value")); 
+            let  num2 = parseInt(prompt("Please insert the Second Value")); 
+            let  num3 = parseInt(prompt("Please insert the Third Value"));  
+
+            if(num1>=num2 && num1>=num3){
+            alert("The Largest number is: " + num1);
+            }else if(num2>=num1 && num2>=num3){
+            alert("The Largest number is: " + num2);
+            }else if(num3>=num1 && num3>=num2){
+            alert("The Largest number is: " + num3);
+            }else{
+                alert("Invalid input, Please try again");
+            }
+        </script>
+
+    
+</body>
+</html>
