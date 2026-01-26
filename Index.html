@@ -3,35 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-    body{
-        text-align: center;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-</style>
-<body>
-
-       <h1>PROGRAM TO DISPLAY THE LARGEST NUMBER USING PROMPT FOR INTEGER VALUES</h1>
-
-        <script>
-            let  num1 = parseInt(prompt("Please insert the First Value")); 
-            let  num2 = parseInt(prompt("Please insert the Second Value")); 
-            let  num3 = parseInt(prompt("Please insert the Third Value"));  
-
-            if(num1>=num2 && num1>=num3){
-            alert("The Largest number is: " + num1);
-            }else if(num2>=num1 && num2>=num3){
-            alert("The Largest number is: " + num2);
-            }else if(num3>=num1 && num3>=num2){
-            alert("The Largest number is: " + num3);
-            }else{
-                alert("Invalid input, Please try again");
-            }
-        </script>
-
+    <meta name="description" content="A modern web application that compares three numbers and displays the largest value with an elegant, interactive user interface.">
+    <meta name="author" content="Martin888Maina">
+    <meta name="keywords" content="JavaScript, Number Comparison, Web Application, Frontend Development">
+    <title>Largest Number Finder | Interactive Number Comparison Tool</title>
     
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <!-- Header section with title and description -->
+        <div class="header">
+            <h1>Find the Largest Number</h1>
+            <p>Enter three numbers below and discover which one is the largest</p>
+        </div>
+        
+        <!-- Main form for number input -->
+        <form id="numberForm" class="number-form">
+            <div class="input-group">
+                <label for="num1">First Number</label>
+                <input 
+                    type="number" 
+                    id="num1" 
+                    name="num1" 
+                    placeholder="Enter first number"
+                    required
+                >
+            </div>
+            
+            <div class="input-group">
+                <label for="num2">Second Number</label>
+                <input 
+                    type="number" 
+                    id="num2" 
+                    name="num2" 
+                    placeholder="Enter second number"
+                    required
+                >
+            </div>
+            
+            <div class="input-group">
+                <label for="num3">Third Number</label>
+                <input 
+                    type="number" 
+                    id="num3" 
+                    name="num3" 
+                    placeholder="Enter third number"
+                    required
+                >
+            </div>
+            
+            <button type="submit" class="submit-btn">Find Largest Number</button>
+        </form>
+        
+        <!-- Result display area (hidden by default, shown via JavaScript) -->
+        <div id="result" class="result"></div>
+        
+        <!-- Footer with attribution -->
+        <div class="footer">
+            <p>Created by <a href="https://github.com/Martin888Maina" target="_blank">Martin Maina</a></p>
+        </div>
+    </div>
+    
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
