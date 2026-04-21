@@ -27,7 +27,7 @@ This application demonstrates core programming concepts including conditional lo
 
 ```
 JS-Largest-Number-Prompt-Program/
-├── Index.html          # Main HTML file with semantic structure
+├── index.html          # Main HTML file with semantic structure
 ├── styles.css          # Comprehensive stylesheet with modern design
 ├── script.js           # JavaScript logic for number comparison
 ├── favicon.ico         # Custom favicon
@@ -47,9 +47,9 @@ git clone https://github.com/Martin888Maina/JS-Largest-Number-Prompt-Program.git
 cd JS-Largest-Number-Prompt-Program
 ```
 
-3. Open `Index.html` in your preferred web browser:
+3. Open `index.html` in your preferred web browser:
 ```bash
-start Index.html
+start index.html
 ```
 
 No additional dependencies or build steps required - it's a pure vanilla JavaScript application.
