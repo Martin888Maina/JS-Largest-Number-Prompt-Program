@@ -1,14 +1,14 @@
 /* CSS Custom Properties for consistent theming */
 :root {
-    --primary-color: #6366f1;
-    --primary-dark: #4f46e5;
-    --secondary-color: #8b5cf6;
+    --primary-color: #f5a623;
+    --primary-dark: #e8920f;
+    --secondary-color: #f7c35a;
     --success-color: #10b981;
     --error-color: #ef4444;
     --text-dark: #1f2937;
     --text-light: #6b7280;
-    --bg-gradient-start: #667eea;
-    --bg-gradient-end: #764ba2;
+    --bg-gradient-start: #cb410b;
+    --bg-gradient-end: #cb410b;
     --card-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     --input-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
     --border-radius: 16px;
@@ -47,6 +47,7 @@ body::before {
         radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
     animation: pulse 8s ease-in-out infinite;
     z-index: 0;
+    pointer-events: none;
 }
 
 @keyframes pulse {
@@ -153,7 +154,7 @@ body::before {
     border-radius: 10px;
     cursor: pointer;
     transition: all var(--transition-speed);
-    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 4px 12px rgba(245, 166, 35, 0.4);
     position: relative;
     overflow: hidden;
 }
@@ -175,10 +176,43 @@ body::before {
 
 .submit-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+    box-shadow: 0 6px 20px rgba(245, 166, 35, 0.5);
 }
 
 .submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Form actions row (submit + reset) */
+.form-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.form-actions .submit-btn {
+    flex: 1;
+}
+
+.reset-btn {
+    padding: 16px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-dark);
+    background: #f3f4f6;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+    font-family: inherit;
+}
+
+.reset-btn:hover {
+    background: #e5e7eb;
+    border-color: #d1d5db;
+    transform: translateY(-2px);
+}
+
+.reset-btn:active {
     transform: translateY(0);
 }
 

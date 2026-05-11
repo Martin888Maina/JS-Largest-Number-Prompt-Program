@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
     inputs.forEach(input => {
         input.addEventListener('input', clearPreviousResult);
     });
+
+    // Wire up the reset/clear button
+    document.getElementById('resetBtn').addEventListener('click', resetForm);
 });
 
 /**
@@ -116,4 +119,16 @@ function clearPreviousResult() {
     if (resultDiv.classList.contains('show')) {
         resultDiv.classList.remove('show');
     }
+}
+
+/**
+ * Resets the form: clears all inputs, hides the result, returns focus to first field
+ */
+function resetForm() {
+    document.getElementById('num1').value = '';
+    document.getElementById('num2').value = '';
+    document.getElementById('num3').value = '';
+    const resultDiv = document.getElementById('result');
+    resultDiv.classList.remove('show');
+    document.getElementById('num1').focus();
 }
